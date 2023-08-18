@@ -57,7 +57,7 @@ ADD ./src/common/scripts $STARTUPDIR
 RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
 RUN $INST_SCRIPTS/rocky.sh
 
-USER 1000
+USER 0
 
 ENTRYPOINT ["/dockerstartup/vnc_startup.sh"]
 CMD ["--wait"]
