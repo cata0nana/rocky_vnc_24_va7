@@ -19,6 +19,23 @@ ENV DISPLAY=:1 \
     NO_VNC_PORT=6901
 EXPOSE $VNC_PORT $NO_VNC_PORT
 
+### Envrionment JAVA
+ARG JDK_VERSION=17
+RUN dpkg --add-architecture i386 && \
+    apt-get update && \
+    apt-get dist-upgrade -y && \
+    apt-get install -y --no-install-recommends libncurses5:i386 libc6:i386 libstdc++6:i386 lib32gcc-s1 lib32ncurses6 lib32z1 zlib1g:i386 && \
+    apt-get install -y --no-install-recommends openjdk-${JDK_VERSION}-jdk && \
+    apt-get install -y --no-install-recommends git wget unzip 
+### Envrionment ANDROID_SDK_VERSION
+ARG ANDROID_SDK_VERSION=9477386
+ENV ANDROID_HOME /opt/android-sdk
+RUN mkdir -p ${ANDROID_HOME}/cmdline-tools && \
+    wget -q https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_SDK_VERSION}_latest.zip && \
+    unzip *tools*linux*.zip -d ${ANDROID_HOME}/cmdline-tools && \
+    mv ${ANDROID_HOME}/cmdline-tools/cmdline-tools ${ANDROID_HOME}/cmdline-tools/tools && \
+    rm *tools*linux*.zip
+
 ### Envrionment config
 ENV HOME=/headless \
     TERM=xterm \
