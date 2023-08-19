@@ -13,16 +13,16 @@ do
     chgrp -R 0 "$var" && chmod -R $verbose a+rw "$var" && find "$var" -type d -exec chmod $verbose a+x {} +
 done
 echo "-------------------------------INSTALL DROID------------------------"
-cd
-wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
-unzip commandlinetools-linux-10406996_latest.zip
+#cd
+#wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
+#unzip commandlinetools-linux-10406996_latest.zip
 #mkdir cmdline-tools
 #unzip commandlinetools-mac-8092744_latest.zip
-mv cmdline-tools latest
-mkdir sdk
-mkdir sdk/cmdline-tools
-mv latest sdk/cmdline-tools
-cd sdk/cmdline-tools/bin/
-./sdkmanager platform-tools emulator
+#mv cmdline-tools latest
+#mkdir sdk
+#mkdir sdk/cmdline-tools
+#mv latest sdk/cmdline-tools
+#cd sdk/cmdline-tools/bin/
+#./sdkmanager platform-tools emulator
 
 
