@@ -23,6 +23,8 @@ echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "platforms;androi
 #echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "platforms;android-30" "system-images;android-30;google_apis_playstore;x86_64" "build-tools;30.0.2"
 echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager platform-tools emulator
 echo "no" | /opt/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n "my_avd_24" -k "system-images;android-24;default;x86_64"
+echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "system-images;android-24;google_apis;arm64-v8a"
+echo "no" | /opt/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n "my_avd_24_arm" -k "system-images;android-24;google_apis;arm64-v8a"
 
 #cd
 #wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
