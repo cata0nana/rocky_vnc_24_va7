@@ -28,7 +28,7 @@ RUN dpkg --add-architecture i386 && \
     apt-get install -y --no-install-recommends openjdk-${JDK_VERSION}-jdk && \
     apt-get install -y --no-install-recommends git wget unzip 
 ### Envrionment ANDROID_SDK_VERSION
-ARG ANDROID_SDK_VERSION=9477386
+ARG ANDROID_SDK_VERSION=10406996
 ENV ANDROID_HOME /opt/android-sdk
 RUN mkdir -p ${ANDROID_HOME}/cmdline-tools && \
     wget -q https://dl.google.com/android/repository/commandlinetools-linux-${ANDROID_SDK_VERSION}_latest.zip && \
