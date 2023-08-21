@@ -19,10 +19,10 @@ echo "export ANDROID_EMULATOR_WAIT_TIME_BEFORE_KILL=60" >> ~/.bashrc
 echo "export ANDROID_AVD_HOME=/root/.android/avd/" >> ~/.bashrc
 source ~/.bashrc
 
-echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "platforms;android-24" "system-images;android-24;default;x86_64" "build-tools;24.0.1"
+#echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "platforms;android-24" "system-images;android-24;default;x86_64" "build-tools;24.0.1"
 #echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "platforms;android-30" "system-images;android-30;google_apis_playstore;x86_64" "build-tools;30.0.2"
-echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager platform-tools emulator
-echo "no" | /opt/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n "my_avd_24" -k "system-images;android-24;default;x86_64"
+#echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager platform-tools emulator
+#echo "no" | /opt/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n "my_avd_24" -k "system-images;android-24;default;x86_64"
 
 #cd
 #wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
