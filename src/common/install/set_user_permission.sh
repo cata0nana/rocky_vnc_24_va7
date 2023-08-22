@@ -21,7 +21,7 @@ source ~/.bashrc
 
 echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "platform-tools" "platforms;android-24" "emulator"
 echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "system-images;android-24;default;armeabi-v7a"
-echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n emuTest -k "system-images;android-24;default;armeabi-v7a"
+echo "no" | /opt/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n emuTest -k "system-images;android-24;default;armeabi-v7a"
 #echo "no" |/opt/android-sdk/emulator/emulator -avd emuTest -noaudio -no-boot-anim -gpu off
 
 #echo "y" | /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "platforms;android-24" "system-images;android-24;default;x86_64" "build-tools;24.0.1"
